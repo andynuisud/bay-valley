@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nogo - Sign Up</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up - Nogo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="style/style.css" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth-compat.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Nogo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Information
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="side-by-side">
+    <div class="left-div">
+      <div class="form-control">
+        <form id="signup-form">
+            <form id="signup-form">
+              <div class="image-container">
+                <img src="images/logo.png" class="logo-img">
+              </div>
+              <h4 class="create-account">Create an account</h4>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" id="password" class="form-control" required>
+                </div>
+                <div class="d-grid gap-2">
+                    <button id="sign-up" class="btn btn-primary" type="submit">Sign Up</button>
+                    <button id="sign-up-google"class="btn btn-light" type="button">Sign Up with Google</button>
+                </div>
+              </form>
+            <div id="account-already" class="form-text">Already have an account? <a href="login.html"><span style="color:blue">Log in</span></a></div>
+        </form>
+      </div>
+    </div>
+    <div class="right-div">
+        <div class="center-div">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        Personalized Guidance
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <a>Our website leverages cutting-edge AI technology to provide personalized guidance throughout the college application process. From choosing the right colleges to crafting compelling essays, our AI-driven tools cater to each user's unique strengths and aspirations.</a>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        Save Time and Effort
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        College applications can be overwhelming, but our AI-powered platform streamlines the entire process, saving users valuable time and effort. With automated tools to organize deadlines, track application progress, and offer timely reminders, the journey becomes stress-free.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                        Enhanced Admissions Success
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      Our AI algorithms analyze successful application patterns and match users with the best-fit colleges based on their academic achievements, extracurricular activities, and interests. Empowered with insights, applicants can make informed decisions to maximize their admissions prospects.
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="scripts/signup.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>
